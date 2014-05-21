@@ -106,7 +106,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // Store instance handle in our global variable
 
    hWnd = dlgzhaigj.Create(NULL,_T("dmzhaigj"),WS_VISIBLE|WS_POPUP,/*WS_EX_TOPMOST*/0);
-   m_wndShadow.SetSize(0);
+   m_wndShadow.SetSize(5);
+   m_wndShadow.SetPosition(0, 0);	//与 size 结合控制阴影相对偏移位置
    m_wndShadow.Create(hWnd);
    
    if (!hWnd)
