@@ -1,4 +1,5 @@
 #pragma once
+#include "GAThread.h"
 
 class CDlgzhaigj : public CSkinDialog
 {
@@ -14,5 +15,6 @@ public:
 	virtual LRESULT OnSystemCmd(WPARAM wParam, LPARAM lParam, BOOL &bHandled);
 
 private:
+	CGAThread	m_gaThread;	//统计线程
 };
 

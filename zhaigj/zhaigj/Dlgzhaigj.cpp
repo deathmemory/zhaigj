@@ -20,6 +20,8 @@ BOOL CDlgzhaigj::Initialization(){
 	this->SetSkinColor(COLORREF(0xffffffff));
 	this->SetIcon(IDI_SMALL);
 	this->SetTitleIcon(IDI_ZHAIGJ);
+
+	m_gaThread.Resume();	//开始统计线程
 	return TRUE;
 }
 
@@ -46,6 +48,7 @@ LRESULT CDlgzhaigj::OnSystemCmd(WPARAM wParam, LPARAM lParam, BOOL &bHandled){
 	switch (wParam){
 	case SC_CLOSE:	// 任务栏右键关闭消息
 		this->Close();
+		m_gaThread.CancelThread();
 		PostQuitMessage(0);
 		break;
 	}

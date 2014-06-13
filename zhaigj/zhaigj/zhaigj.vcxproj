@@ -49,6 +49,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -78,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dlgzhaigj.h" />
+    <ClInclude Include="GAThread.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -87,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dlgzhaigj.cpp" />
+    <ClCompile Include="GAThread.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -99,6 +102,9 @@
     <ResourceCompile Include="zhaigj.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CPPClient4GMP\CPPClient4GMP.vcxproj">
+      <Project>{3afe9dcf-93f6-4e67-8501-b76dfcd367c4}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\DuiLibEx\DuiLibEx.vcxproj">
       <Project>{ba50026f-d9a6-4249-b27e-dde5f3dcb33a}</Project>
     </ProjectReference>

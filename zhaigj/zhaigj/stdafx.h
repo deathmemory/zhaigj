@@ -19,4 +19,8 @@
 
 #include "TrayIcon.h"
 #include "../DuiLibEx/DUIlibEx.h"
+#include "../CPPClient4GMP/GAClient.h"
+#define GOOGLEID_NIGOULE_COM				L"UA-51732277-1"
+#define GOOGLEID_AppID						L"zhaigj"
+extern GAClient gaClient;
 // TODO: reference additional headers your program requires here

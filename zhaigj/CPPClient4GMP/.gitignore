@@ -1,0 +1,9 @@
+*.obj
+*.tmp
+Release/
+Debug/
+*.exe
+*.lib
+*.ncb
+*.suo
+*.user
